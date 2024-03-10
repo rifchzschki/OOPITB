@@ -1,0 +1,47 @@
+Berikut adalah implementasi dari kelas Hero, Axe, dan Invoker. Kelas-kelas tersebut merepresentasikan abstract class hero yang mempunyai turunan hero lain. Atribut dan method dari kelas-kelas tersebut dapat dilihat pada kode implementasi tersebut, di mana setiap method akan menghasilkan keluaran khusus jika dipanggil.
+
+Berikut adalah header untuk kelas Hero, Axe, dan Invoker.
+
+Contoh Main	Contoh Output
+int main() {
+    Invoker i;
+    i.useSkill();
+
+    return 0;
+}
+hero is born with 50 200
+invoker is born with 50 200
+invoker is using skill 50 200
+no invoker 50 200
+hero has fallen 50 200
+
+Unggahlah file main.cpp yang berisi main program, untuk menghasilkan keluaran sebagai berikut:
+hero is born with 10 1000
+invoker is born with 10 1000
+invoker is using skill 10 1000
+hero is copied with 10 1000
+invoker copy is born with 10 1000
+hero is healing 1 10 1000
+hero is born with 50 200
+invoker is born with 50 200
+invoker is moving to 10,25 50 200
+invoker copied 10 1000
+hero is born with 200 10
+axe is born with 200 10
+axe is moving to 2,20 200 10
+axe is healing 10 200 10
+hero is copied with 200 10
+axe copy is born with 200 10
+hero is born with 400 20
+axe is born with 400 20
+axe here with more power 400 20
+hero is copied with 400 20
+axe copy is born with 400 20
+axe is using skill 200 10
+axe is using skill 400 20
+no axe 200 10
+hero has fallen 200 10
+no axe 400 20
+hero has fallen 400 20
+no invoker 10 1000
+hero has fallen 10 1000
