@@ -11,10 +11,10 @@ class Kendaraan{
     public:
         Kendaraan(int nomor, string merk, int tahun):nomor(nomor), merk(merk), tahun(tahun){}
         virtual long biayaSewa(int lamaSewa)=0;
-        void printInfo(){
-            cout << "Nomor :" << nomor << endl;
-            cout << "Merk :" << merk << endl;
-            cout << "Tahun :" << tahun << endl << endl;
+        virtual void printInfo(){
+            cout << "Nomor: " << nomor << endl;
+            cout << "Merk: " << merk << endl;
+            cout << "Tahun: " << tahun << endl;
         }
 
 };
@@ -27,6 +27,10 @@ class Bus : public Kendaraan {
         Bus(int nomor, string merk, int tahun): kapasitas(0), Kendaraan(nomor, merk, tahun){}
         long biayaSewa(int lamaSewa){
             return 1000000*lamaSewa;
+        }
+        void printInfo(){
+            Kendaraan :: printInfo();
+            cout << "Kategori: Bus" << endl << endl;
         }
         void tambahKapasitas(const int& tambahan){
             kapasitas += tambahan;
@@ -44,7 +48,11 @@ class Minibus : public Kendaraan {
             if(lamaSewa<=5){return 5000000;}
             else{return 5000000 + 5000000*(lamaSewa-5);}
         }
-        int diskon(int lamaSewa){
+        void printInfo(){
+            Kendaraan :: printInfo();
+            cout << "Kategori: Minibus" << endl << endl;
+        }
+        float diskon(int lamaSewa){
             if(lamaSewa > 10){
                 return 0.1 * biayaSewa(lamaSewa);
             }else {
@@ -68,6 +76,10 @@ class Mobil : public Kendaraan {
         }
         void setSupir(const string& nama){
             supir = nama;
+        }
+        void printInfo(){
+            Kendaraan :: printInfo();
+            cout << "Kategori: Mobil" << endl << endl;
         }
 };
 
